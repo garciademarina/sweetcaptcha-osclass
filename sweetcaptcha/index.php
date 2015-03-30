@@ -82,12 +82,12 @@ function sweetcaptcha_ajax()
 
 osc_add_hook('admin_header','sweetcaptcha_admin_menu');
 function sweetcaptcha_admin_menu() {
-
+    osc_add_admin_submenu_divider('plugins', __('SweetCaptcha', 'sweetcaptcha'), 'sweetcaptcha');
     osc_add_admin_submenu_page(
         'plugins',
-        __('SweetCaptcha', 'sweetcaptcha'),
-        osc_admin_render_plugin_url(osc_plugin_folder(__FILE__)."admin.php"),
-        'sweetcaptcha',
+        __('Settings', 'sweetcaptcha'),
+        osc_admin_render_plugin_url(osc_plugin_folder(__FILE__)."admin/admin.php"),
+        'sweetcaptcha_settings',
         'moderator'
     );
 }
